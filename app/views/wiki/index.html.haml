@@ -1,7 +1,8 @@
-.mt-2
-  - if @article.nil?
+.col-6.mt-2
+  - if @articles.nil?
     %h2 No articles yet
   - else
+    %h2 List of Articles: 
     - @articles.each do |article|
-      li{class="list-group-item"}= article.title
+      %li(class="list-group-item")= article.title
 

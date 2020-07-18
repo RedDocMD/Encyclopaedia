@@ -90,6 +90,9 @@ GEM
       tilt
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
+    io-console (0.5.6)
+    irb (1.2.4)
+      reline (>= 0.0.1)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
     jquery-rails (4.4.0)
@@ -155,6 +158,8 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (1.7.1)
+    reline (0.1.4)
+      io-console (~> 0.5)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -219,6 +224,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   haml
+  irb
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.2)
