@@ -1,6 +1,6 @@
 %html
   %head
-    %title Encyclopedia
+    %title= title_helper(yield :title)
     = csrf_meta_tag
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
