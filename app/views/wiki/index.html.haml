@@ -1,0 +1,7 @@
+.mt-2
+  - if @article.nil?
+    %h2 No articles yet
+  - else
+    - @articles.each do |article|
+      li{class="list-group-item"}= article.title
+
