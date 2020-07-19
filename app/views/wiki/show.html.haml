@@ -1,6 +1,6 @@
 .col-10.mt-2
   - if @wiki.nil?
-    %h2(class="text-danger mt-4")= "Wiki for #{@title} not found"
+    %h2(class="text-danger mt-4")= "This page was not found"
   - else 
-    - provide :title, @title
+    - provide :title, @wiki.title
     != @html
