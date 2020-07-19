@@ -1,2 +1,6 @@
-- provide :title, @title
-%h2(class="text-success")= @title
+.col-10.mt-2
+  - if @wiki.nil?
+    %h2(class="text-danger mt-4")= "Wiki for #{@title} not found"
+  - else 
+    - provide :title, @title
+    != @html
