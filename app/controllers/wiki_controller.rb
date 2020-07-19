@@ -15,6 +15,9 @@ class WikiController < ApplicationController
     @html = Kramdown::Document.new(@wiki.text).to_html unless @wiki.nil?
   end
 
+  def new
+  end
+
   private
   def is_integer?(str)
     str == str.to_i.to_s
