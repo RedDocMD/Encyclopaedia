@@ -3,6 +3,7 @@
     %h2 No articles yet
   - else
     %h2 List of Articles 
-    - @articles.each do |article|
-      %li(class="list-group-item")
-        = link_to article.title, article
+    %ul(class="list-group")
+      - @articles.each do |article|
+        %li(class="list-group-item")
+          = link_to article.title, article

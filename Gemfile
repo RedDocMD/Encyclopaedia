@@ -31,7 +31,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Bootstrap
 gem 'bootstrap', '~> 4.5.0'
 gem 'jquery-rails'
-gem 'haml'
+gem 'haml-rails'
 gem 'kramdown'
 
 group :development, :test do

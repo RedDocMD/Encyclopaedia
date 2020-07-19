@@ -1,0 +1,7 @@
+.col-6.mt-2
+  %h1= "Search results for \"#{@query}\""
+  %h3(class="text-info")= "#{pluralize(@wikis.length, 'result')} found"
+  %ul(class="list-group")
+    - @wikis.each do |article|
+      %li(class="list-group-item")
+        = link_to article.title, article
