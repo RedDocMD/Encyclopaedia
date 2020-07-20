@@ -18,8 +18,11 @@ class WikiController < ApplicationController
   def new
   end
 
-  private
-  def is_integer?(str)
-    str == str.to_i.to_s
+  def create
   end
+
+  private
+    def is_integer?(str)
+      str == str.to_i.to_s
+    end
 end

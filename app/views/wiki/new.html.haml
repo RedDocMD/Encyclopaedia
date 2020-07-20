@@ -1,2 +1,6 @@
-.col-12.mt-2
-  #editor
+.col-12.mt-5
+  = form_with url: '/wiki', local: 'true' do
+    = text_field_tag :title, nil, placeholder: 'Title', class: 'form-control'
+    #editor.my-4
+    %button(type="Submit" class="btn btn-primary") Create wiiki
+  = javascript_pack_tag 'editor'
