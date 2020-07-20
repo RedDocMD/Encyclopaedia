@@ -16,9 +16,17 @@ class WikiController < ApplicationController
   end
 
   def new
+    @wiki = Wiki.new
   end
 
   def create
+    wiki = Wiki.new(params.require(:wiki).permit(:title, :text))
+    if wiki.save
+      redirect_to wiki
+    else
+      @wiki = wiki
+      render 'new'
+    end
   end
 
   private

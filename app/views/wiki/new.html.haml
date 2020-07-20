@@ -1,6 +1,13 @@
 .col-12.mt-5
-  = form_with url: '/wiki', local: 'true' do
-    = text_field_tag :title, nil, placeholder: 'Title', class: 'form-control'
+  - if @wiki.errors.any?
+    .alert.alert-danger
+      %p #{pluralize(@wiki.errors.count, 'error')} prevented this wiki from being created
+      %ul
+        - @wiki.errors.full_messages.each do |error|
+          %li= error
+  = form_with scope: @wiki, url: '/wiki', local: true do |form|
+    = form.text_field :title, placeholder: 'Title', class: 'form-control'
+    = form.hidden_field :text
     #editor.my-4
-    %button(type="Submit" class="btn btn-primary") Create wiiki
-  = javascript_pack_tag 'editor'
+    = submit_tag "Create wiki", class: "btn btn-primary"
+    = javascript_pack_tag 'editor'
