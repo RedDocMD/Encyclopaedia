@@ -2,7 +2,10 @@ require 'kramdown'
 
 class WikisController < ApplicationController
   def index
-    @wikis = Wiki.all.to_a.sort_by { |x| x.title }
+    @wikis = Wiki.all
+    unless @wiikis.nil?
+      @wikis = @wikis.to_a.sort_by { |x| x.title }
+    end
   end
 
   def show
