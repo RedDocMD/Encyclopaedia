@@ -1,9 +1,9 @@
 .col-6.mt-2
-  - if @articles.nil?
+  - if @wikis.nil?
     %h2 No articles yet
   - else
-    %h2 List of Articles 
+    %h2(class="py-2") List of Articles 
     %ul(class="list-group")
-      - @articles.each do |article|
+      - @wikis.each do |article|
         %li(class="list-group-item")
           = link_to article.title, article
